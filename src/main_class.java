@@ -1,14 +1,26 @@
-
 import java.util.HashMap;
 import java.util.Scanner; // Importerar klassen Scanner
 
-//import org.junit.jupiter.api.test;
 
-//import static org.junit.assertions.assertEquals;
 
-//public class Junittest {}
 
 public class main_class {
+
+   private static Scanner sc = new Scanner(System.in);
+
+   public static void main(String[] args) {
+      Lines lines = new Lines();
+
+      System.out.println("Write words and write stop to finish");
+      while (!lines.isStopped()) {
+         String input = sc.nextLine();
+         lines.calculate(input);
+      }
+
+      System.out.println(lines.getResult());
+   }
+
+}
 
     public static void main(String[] args) {
 
